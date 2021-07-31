@@ -1,5 +1,5 @@
 import numpy as np
-import scipy.misc
+import imageio
 
 
 def transform(images, inv_type='255'):
@@ -50,7 +50,7 @@ def split(image, n_patch=16):
 
 
 def save_image(images, size, path):
-    return scipy.misc.imsave(path, merge(images, size))
+    return imageio.imwrite(path, merge(images, size))
 
 
 def save_images(images, size, image_path, inv_type='255', use_inverse=False):
@@ -60,7 +60,7 @@ def save_images(images, size, image_path, inv_type='255', use_inverse=False):
 
 def img_save(img, path, inv_type='255', use_inverse=False):
     img = inverse_transform(img, inv_type) if use_inverse else img
-    return scipy.misc.imsave(path, img)
+    return imageio.imwrite(path, img)
 
 
 def rotate(images):
