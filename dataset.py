@@ -374,7 +374,7 @@ class Div2KDataSet:
         self.use_img_scaling = use_img_scale
 
         if self.ds_path:  # like .h5 or .tfr # will be in the same folder
-            self.ds_hr_path = self.ds_path + "/DIV2K_train_HR/"
+            self.ds_hr_path = self.ds_path + "DIV2K_train_HR/"
             self.ds_lr_path = self.ds_hr_path
 
         self.hr_images = DataSetLoader(path=self.ds_hr_path,

@@ -11,6 +11,8 @@ import os
 import model
 import util
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
+
 
 # Argument
 parser = argparse.ArgumentParser()

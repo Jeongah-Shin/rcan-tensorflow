@@ -50,7 +50,7 @@ train_arg.add_argument('--opt_epsilon', type=float, default=1e-8)
 
 # Train/Test hyper-parameters
 data_arg = add_arg_group('Data')
-data_arg.add_argument('--data_dir', type=str, default="/root/mnt/DIV2K/")
+data_arg.add_argument('--data_dir', type=str, default="/root/mnt/DIV2K")
 data_arg.add_argument('--output_dir', type=str, default='./output/')
 data_arg.add_argument('--summary', type=str, default='./log/')
 data_arg.add_argument('--patch_size', type=int, default=16)
@@ -58,7 +58,7 @@ data_arg.add_argument('--patch_size', type=int, default=16)
 # Misc
 misc_arg = add_arg_group('Misc')
 misc_arg.add_argument('--device', type=str, default='gpu')
-misc_arg.add_argument('--n_gpu', type=int, default=1)
+misc_arg.add_argument('--n_gpu', type=int, default=2)
 misc_arg.add_argument('--n_threads', type=int, default=8)
 misc_arg.add_argument('--pre_trained', type=str, default='./model/')
 misc_arg.add_argument('--seed', type=int, default=1)

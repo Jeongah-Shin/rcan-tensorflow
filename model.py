@@ -5,6 +5,7 @@ import numpy as np
 import tensorflow as tf
 
 
+
 class RCAN:
 
     def __init__(self,
@@ -36,7 +37,7 @@ class RCAN:
                  opt_eps=1e-8,                             # Adam epsilon value
                  eps=1.1e-5,                               # epsilon
                  tf_log="./model/",                        # path saved tensor summary / model
-                 n_gpu=1,                                  # number of GPU
+                 n_gpu=2,                                  # number of GPU
                  ):
         self.sess = sess
         self.batch_size = batch_size
