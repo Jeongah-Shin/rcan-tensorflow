@@ -344,8 +344,8 @@ class Div2KDataSet:
         """
         self.ds_path = ds_path
         self.ds_name = ds_name
-        self.ds_hr_path = ds_hr_path
-        self.ds_lr_path = ds_lr_path
+        self.ds_hr_path = '/root/mnt/DIV2K/DIV2K_train_HR'
+        self.ds_lr_path = '/root/mnt/DIV2K/DIV2K_train_LR_bicubic/X4'
 
         try:
             assert self.ds_path
