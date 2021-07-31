@@ -11,7 +11,7 @@ import os
 import model
 import util
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "1,2,3"
 tf.debugging.set_log_device_placement(True)
 
 
