@@ -9,6 +9,35 @@ Image Super-Resolution Using Very Deep Residual Channel Attention Networks Imple
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/kozistr/rcan-tensorflow.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/kozistr/rcan-tensorflow/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/kozistr/rcan-tensorflow.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/kozistr/rcan-tensorflow/context:python)
 
+## Datsets Feeding
+```
+tfds.core.DatasetInfo(
+    name='div2k',
+    version=2.0.0,
+    description='DIV2K dataset: DIVerse 2K resolution high quality images as used for the challenges @ NTIRE (CVPR 2017 and CVPR 2018) and @ PIRM (ECCV 2018)',
+    homepage='https://data.vision.ee.ethz.ch/cvl/DIV2K/',
+    features=FeaturesDict({
+        'hr': Image(shape=(None, None, 3), dtype=tf.uint8),
+        'lr': Image(shape=(None, None, 3), dtype=tf.uint8),
+    }),
+    total_num_examples=900,
+    splits={
+        'train': 800,
+        'validation': 100,
+    },
+    supervised_keys=('lr', 'hr'),
+    citation="""@InProceedings{Ignatov_2018_ECCV_Workshops,
+    author = {Ignatov, Andrey and Timofte, Radu and others},
+    title = {PIRM challenge on perceptual image enhancement on smartphones: report},
+    booktitle = {European Conference on Computer Vision (ECCV) Workshops},
+    url = "http://www.vision.ee.ethz.ch/~timofter/publications/Agustsson-CVPRW-2017.pdf",
+    month = {January},
+    year = {2019}
+    }""",
+    redistribution_info=,
+)
+```
+
 ## Introduction
 This repo contains my implementation of RCAN (Residual Channel Attention Networks).
 
