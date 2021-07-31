@@ -305,13 +305,11 @@ class Div2KDataSet:
         :param lr_width: input LR image width, default 192
         :param channel: input image channel, default 3 (RGB)
         - in case of Div2K - ds x4, image size is 768 x 768 x 3 (HWC).
-
         # Pre-Processing Option
         :param n_patch: patch size to crop, default 16
         :param split_rate: image split rate (into train & test), default 0.1
         :param random_state: random seed for shuffling, default 42
         :param n_threads: the number of threads for multi-threading, default 8
-
         # DataSet Option
         :param ds_path: DataSet's Path, default None
         :param ds_name: DataSet's Name, default None
@@ -374,7 +372,7 @@ class Div2KDataSet:
         self.use_img_scaling = use_img_scale
 
         if self.ds_path:  # like .h5 or .tfr # will be in the same folder
-            self.ds_hr_path = self.ds_path + "DIV2K_train_HR/"
+            self.ds_hr_path = self.ds_path + "/DIV2K_train_HR/"
             self.ds_lr_path = self.ds_hr_path
 
         self.hr_images = DataSetLoader(path=self.ds_hr_path,
