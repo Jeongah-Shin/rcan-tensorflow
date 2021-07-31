@@ -50,7 +50,7 @@ train_arg.add_argument('--opt_epsilon', type=float, default=1e-8)
 
 # Train/Test hyper-parameters
 data_arg = add_arg_group('Data')
-data_arg.add_argument('--data_dir', type=str, default="D://DataSet//DIV2K//")
+data_arg.add_argument('--data_dir', type=str, default="/root/mnt/DIV2K/")
 data_arg.add_argument('--output_dir', type=str, default='./output/')
 data_arg.add_argument('--summary', type=str, default='./log/')
 data_arg.add_argument('--patch_size', type=int, default=16)
