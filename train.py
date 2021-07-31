@@ -111,8 +111,8 @@ def main():
     tf_config = tf.ConfigProto(allow_soft_placement=True, log_device_placement=False, gpu_options=gpu_config)
 
     with tf.Session(config=tf_config) as sess:
-        from tensorflow.keras.utils import multi_gpu_model
-        r_model = model.RCAN(sess=sess,
+        # from tensorflow.keras.utils import multi_gpu_model
+        rcan_model = model.RCAN(sess=sess,
                                 lr_img_size=lr_shape[:-1],
                                 hr_img_size=hr_shape[:-1],
                                 batch_size=config.batch_size,
@@ -136,7 +136,7 @@ def main():
                                 tf_log=config.summary,
                                 n_gpu=config.n_gpu,
                                 )
-        rcan_model = multi_gpu_model(r_model, gpus=2)
+        # rcan_model = multi_gpu_model(r_model, gpus=2)
 
         # Initializing
         sess.run(tf.global_variables_initializer())

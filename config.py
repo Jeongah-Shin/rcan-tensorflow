@@ -58,7 +58,7 @@ data_arg.add_argument('--patch_size', type=int, default=16)
 # Misc
 misc_arg = add_arg_group('Misc')
 misc_arg.add_argument('--device', type=str, default='gpu')
-misc_arg.add_argument('--n_gpu', type=int, default=2)
+misc_arg.add_argument('--n_gpu', type=int, default=1)
 misc_arg.add_argument('--n_threads', type=int, default=8)
 misc_arg.add_argument('--pre_trained', type=str, default='./model/')
 misc_arg.add_argument('--seed', type=int, default=1)
