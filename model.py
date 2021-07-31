@@ -12,10 +12,10 @@ class RCAN:
                  batch_size=16,                            # batch size
                  n_channel=3,                              # number of image channel, 3 for RGB, 1 for gray-scale
                  img_scaling_factor=4,                     # image scale factor to up
-                 lr_img_size=(48, 48),                     # input patch image size for LR
-                 hr_img_size=(192, 192),                   # input patch image size for HR
+                 lr_img_size=(192, 192),                     # input patch image size for LR
+                 hr_img_size=(768, 768),                   # input patch image size for HR
                  n_res_blocks=20,                          # number of residual block
-                 n_res_groups=10,                          # number of residual group
+                 n_res_groups=1,                          # number of residual group
                  res_scale=1,                              # scaling factor of res block
                  n_filters=64,                             # number of conv2d filter size
                  kernel_size=3,                            # number of conv2d kernel size
